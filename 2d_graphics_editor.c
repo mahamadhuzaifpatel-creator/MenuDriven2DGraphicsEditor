@@ -70,12 +70,71 @@ void drawRectangle()
         canvas[i][col+width-1]='*';
     }
 }
+
+void drawTriangle()
+{
+    int row,col,height,i;
+
+    printf("Enter top row: ");
+    scanf("%d",&row);
+
+    printf("Enter center column: ");
+    scanf("%d",&col);
+
+    printf("Enter height: ");
+    scanf("%d",&height);
+
+    for(i=0;i<height;i++)
+    {
+        canvas[row+i][col-i]='*';
+        canvas[row+i][col+i]='*';
+    }
+
+    for(i=col-height+1;i<=col+height-1;i++)
+    {
+        canvas[row+height-1][i]='*';
+    }
+}
+
+void drawCircle()
+{
+    int centerRow,centerCol,radius;
+    int x,y;
+
+    printf("Enter center row: ");
+    scanf("%d",&centerRow);
+
+    printf("Enter center column: ");
+    scanf("%d",&centerCol);
+
+    printf("Enter radius: ");
+    scanf("%d",&radius);
+
+    for(x=0;x<ROWS;x++)
+    {
+        for(y=0;y<COLS;y++)
+        {
+            int dx=x-centerRow;
+            int dy=y-centerCol;
+
+            double d=sqrt(dx*dx+dy*dy);
+
+            if(d>=radius-0.5 && d<=radius+0.5)
+            {
+                canvas[x][y]='*';
+            }
+        }
+    }
+}
+
 int main()
 {
     initializeCanvas();
 
     drawLine();
     drawRectangle();
+    drawTriangle();
+    drawCircle();
 
     displayCanvas();
 
