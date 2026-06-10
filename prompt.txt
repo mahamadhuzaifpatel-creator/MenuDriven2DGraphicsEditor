@@ -1,0 +1,30 @@
+I have a C programming mini-project with 4 days remaining.
+
+Project requirements:
+- Use a 2D character array as a canvas
+- Draw Line
+- Draw Rectangle
+- Draw Triangle
+- Draw Circle
+- Add objects
+- Delete objects
+- Modify objects
+- Display picture
+- Menu-driven program
+
+Generate the project in 4 realistic daily development stages.
+
+For each day provide:
+1. The code added on that day only
+2. Changes required in main()
+3. Git commit message
+4. Brief explanation of what was implemented
+5. Ensure each day's code compiles and runs
+
+Finally provide:
+- The complete integrated code
+- GitHub repository structure
+- Viva questions and answers
+- Possible improvements for extra marks
+
+Use beginner-friendly C code and avoid advanced concepts.
